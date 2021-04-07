@@ -35,6 +35,7 @@ body {font-family: "Lato", sans-serif}
             <h2 class="w3-wide w3-center">MERCHANDISE</h2>
           <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
             <div class="w3-third w3-margin-bottom">
+              <img src="images/tshirt.jpg" alt="shirt" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white">
                 <p><b>T-SHIRT</b></p>
                 <form action="">
@@ -61,7 +62,35 @@ body {font-family: "Lato", sans-serif}
                   </form>
               </div>
             </div>
+
+            <div class="w3-third w3-margin-bottom">
+              <img src="images/cap.jpeg" alt="cap" style="width:100%" height=250px class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                <p><b>CAP</b></p>
+                <form action="">
+                    <label for="size">Sizes:</label>
+                    <select name="sizes" id="sizes">
+                      <option value="small">S</option>
+                      <option value="medium">M</option>
+                      <option value="large">L</option>
+                    </select>
+
+                    </select>
+                    <br><br>
+                    <label for="gender">Is a gift?</label>
+                    <select name="isGift" id="isGift">
+                      <option value="yes_gift">Yes</option>
+                      <option value="no_gift">No</option>
+                    </select>
+                    <br><br>
+                    <button class="w3-button w3-black w3-margin-bottom" onclick="">BUY</button>
+                  </form>
+              </div>
+            </div>
           </div>
+
+
+          
 
 </div>
 
