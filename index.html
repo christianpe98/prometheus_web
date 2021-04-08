@@ -19,6 +19,30 @@ body {font-family: "Lato", sans-serif}
     border-radius: 50%;
 }
 
+.collapsible { /* code by w3schools.com */
+  background-color: #fff;
+  font-size: 20px;
+  color: #757575;
+  cursor: pointer;
+  margin-top: 0.3em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.content {
+  display: none;
+  text-align: justify;
+  margin-right: 2em;
+	margin-left: 2em;
+  margin-bottom: 0.2em;
+}
+
+.active, .collapsible:hover {
+  background-color: #DDD;
+}
+
 .mySlides {display: none}
 </style>
 <body>
@@ -74,19 +98,19 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-row w3-padding-32">
       <div class="w3-quarter">
         <p>Christian</p>
-        <img src="images/christian_photo.jpeg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="images/christian_photo.jpeg" class="img-circle person" alt="Christian" width="255" height="255">
       </div>
       <div class="w3-quarter">
         <p>Sara</p>
-        <img src="images/sara_photo.jpeg" class="img-circle person" alt="Random Name" width="255" height="255" >
+        <img src="images/sara_photo.jpeg" class="img-circle person" alt="Sara" width="255" height="255" >
       </div>
       <div class="w3-quarter">
         <p>Ángel</p>
-        <img src="images/angel_photo.jpeg" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="images/angel_photo.jpeg" class="img-circle person" alt="Ángel" width="255" height="255">
       </div>
       <div class="w3-quarter">
         <p>Fernando</p>
-        <img src="images/fer_photo.png" class="img-circle person" alt="Random Name" width="255" height="255">
+        <img src="images/fer_photo.png" class="img-circle person" alt="Fernando" width="255" height="255">
       </div>
     </div>
   </div>
@@ -96,42 +120,68 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
       <h2 class="w3-wide w3-center">TOUR DATES</h2>
       <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
-
+      
       <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
-        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
+        <li class="w3-padding"><button type="button" class="collapsible w3-padding">May <span class="w3-badge w3-right w3-margin-right">2</span></button>
+        
+          <div class="content w3-row-padding w3-padding-16" style="margin:0 -16px">
+            <div class="w3-third">
+              <img src="images/london.png" alt="London" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white w3-border">
+                <p><b>London</b></p>
+                <p class="w3-opacity">Sat 22 May 2021</p>
+                <p>The secret city inside a city.</p>
+                <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="w3-third">
+              <img src="images/paris.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white w3-border">
+                <p><b>Paris</b></p>
+                <p class="w3-opacity">Sat 29 May 2021</p>
+                <p>All out on the city of light and love.</p>
+                <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <li class="w3-padding"><button type="button" class="collapsible w3-padding">July <span class="w3-tag w3-red w3-margin-left">Sold out</span></button></li>
+        
+        <li class="w3-padding"><button type="button" class="collapsible w3-padding">August <span class="w3-badge w3-right w3-margin-right">3</span></button>
+        
+          <div class="content w3-row-padding  w3-padding-16" style="margin:0 -16px">
+            <div class="w3-third">
+              <img src="images/toronto.png" alt="Toronto" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white w3-border">
+                <p><b>Toronto</b></p>
+                <p class="w3-opacity">Sat 14 Aug 2021</p>
+                <p>You can see the tower from the venue!</p>
+                <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="w3-third">
+              <img src="images/newyork.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white w3-border">
+                <p><b>New York</b></p>
+                <p class="w3-opacity">Sat 21 Aug 2021</p>
+                <p>The biggest concert in the biggest city.</p>
+                <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+              </div>
+            </div>
+            <div class="w3-third">
+              <img src="images/sanfran.jpeg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white w3-border">
+                <p><b>San Francisco</b></p>
+                <p class="w3-opacity">Sat 28 Aug 2021</p>
+                <p>Shouldn't the Golden Gate Bridge be golden?</p>
+                <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
-
-      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/newyork.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>New York</b></p>
-            <p class="w3-opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/paris.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Paris</b></p>
-            <p class="w3-opacity">Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="images/sanfran.jpeg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>San Francisco</b></p>
-            <p class="w3-opacity">Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 
@@ -232,6 +282,28 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+</script>
+
+<script> // by w3schools.com
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    try {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+    catch(except) {
+      this.classList.toggle("active");
+    }
+  });
 }
 </script>
 
