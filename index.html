@@ -3,6 +3,21 @@
 <title>Prometheus</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVPLSPX');</script>
+<!-- End Google Tag Manager -->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- End jQuery -->
+
+<script src="scripts.js"></script>
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -46,6 +61,10 @@ body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVPLSPX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -225,16 +244,16 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
+        <form action="" onsubmit="submitContact();">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+              <input id="contact-name" class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+              <input id="contact-email" class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <input id="contact-message" class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
           <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
         </form>
       </div>
