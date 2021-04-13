@@ -35,8 +35,11 @@ function checkCookie() {
   }
 }
 
+//////////////////////////
+//// JQUERY FUNCTIONS ////
+////////////////////////
 
-// JQUERY FUNCTIONS
+// Contact
 function contactName() {
   return $('#contact-name').val();
 }
@@ -55,7 +58,22 @@ function clearContact() {
   $('#contact-message').val('');
 }
 
-// EVENT FUNCTIONS
+
+// Tickets
+function ticketNumber() {
+  return $('#tickets-number').val();
+}
+
+function ticketEmail() {
+  return $('#tickets-email').val();
+}
+
+
+//////////////////////////
+//// EVENT FUNCTIONS ////
+////////////////////////
+
+// Contact
 function submitContact() {
   name = contactName();
   email = contactEmail();
@@ -68,5 +86,20 @@ function submitContact() {
   }
   
   dataLayer.push({'event': 'submit-contact', 'data': data});
-  
+}
+
+// Tickets
+function buyTickets() {
+  nTickets = ticketNumber();
+  email = ticketEmail();
+
+  console.log(nTickets);
+  console.log(email);
+
+  data = {
+    tickets: nTickets,
+    email: email,
+  }
+
+  dataLayer.push({'event': 'buy-tickets', 'data': data});
 }
