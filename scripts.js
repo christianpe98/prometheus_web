@@ -1,10 +1,13 @@
 
+// UUID magic gotten from https://gist.github.com/jed/982883
+var uuidv4 = () => ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c =>(c^(window.crypto||window.msCrypto).getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16));
+
 // COOKIE
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   var expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/" + "; SameSite=Strict";
 }
 
 function getCookie(cname) {
@@ -24,20 +27,19 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  var username = getCookie("username");
-  if (username != "") {
-   alert("Welcome again " + username);
-  } else {
-    username = prompt("Please enter your name:", "");
-    if (username != "" && username != null) {
-      setCookie("username", username, 365);
+  var user_uuid = getCookie("user_uuid");
+  if (user_uuid == "") {
+    user_uuid = uuidv4();
+    if (user_uuid != "" && user_uuid != null) {
+      setCookie("user_uuid", user_uuid, 365);
     }
   }
+  console.log("Cookie: " + user_uuid);
 }
 
 //////////////////////////
 //// JQUERY FUNCTIONS ////
-////////////////////////
+//////////////////////////
 
 // Contact
 function contactName() {
@@ -82,7 +84,8 @@ function submitContact() {
   data = {
     name: name,
     email: email,
-    message: message
+    message: message,
+    uuid: user_uuid
   }
   
   dataLayer.push({'event': 'submit-contact', 'data': data});
@@ -99,6 +102,7 @@ function buyTickets() {
   data = {
     tickets: nTickets,
     email: email,
+    uuid: user_uuid
   }
 
   dataLayer.push({'event': 'buy-tickets', 'data': data});

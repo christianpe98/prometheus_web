@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Prometheus</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Prometheus</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PVPLSPX');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PVPLSPX');</script>
+  <!-- End Google Tag Manager -->
 
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- End jQuery -->
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- End jQuery -->
 
-<script src="scripts.js"></script>
+  <script src="scripts.js"></script>
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", sans-serif}
-.person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.9;
-}
-.img-circle {
-    border-radius: 50%;
-}
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {font-family: "Lato", sans-serif}
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.9;
+  }
+  .img-circle {
+      border-radius: 50%;
+  }
 
-.collapsible { /* code by w3schools.com */
-  background-color: #fff;
-  font-size: 20px;
-  color: #757575;
-  cursor: pointer;
-  margin-top: 0.3em;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-}
+  .collapsible { /* code by w3schools.com */
+    background-color: #fff;
+    font-size: 20px;
+    color: #757575;
+    cursor: pointer;
+    margin-top: 0.3em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+  }
 
-.content {
-  display: none;
-  text-align: justify;
-  margin-right: 2em;
-	margin-left: 2em;
-  margin-bottom: 0.2em;
-}
+  .content {
+    display: none;
+    text-align: justify;
+    margin-right: 2em;
+  	margin-left: 2em;
+    margin-bottom: 0.2em;
+  }
 
-.active, .collapsible:hover {
-  background-color: #DDD;
-}
+  .active, .collapsible:hover {
+    background-color: #DDD;
+  }
 
-.mySlides {display: none}
-</style>
-<body> <!--onload="checkCookie();">-->
+  .mySlides {display: none}
+  </style>
+</head>
+
+<body onload="checkCookie();">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVPLSPX"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -224,7 +227,7 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-container">
         <form action="" onsubmit="buyTickets();">
           <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-          <input id="tickets-number"class="w3-input w3-border" type="text" placeholder="How many?">
+          <input id="tickets-number"class="w3-input w3-border" type="number" min="1" placeholder="How many?">
           <p><label><i class="fa fa-user"></i> Send To</label></p>
           <input id="tickets-email" class="w3-input w3-border" type="text" placeholder="Enter email">
           <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" type="submit" onclick="location.href='thankyou.html';">PAY <i class="fa fa-check"></i></button>
