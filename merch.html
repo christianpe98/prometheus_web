@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Prometheus - Merchandise</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PVPLSPX');</script>
-  <!-- End Google Tag Manager -->
+<title>Prometheus - Merchandise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- End jQuery -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVPLSPX');</script>
+<!-- End Google Tag Manager -->
 
-  <script src="scripts.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- End jQuery -->
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-  body {font-family: "Lato", sans-serif}
-  .mySlides {display: none}
-  </style>
-</head>
+<script src="scripts.js"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
 
 <body onload="checkCookie();">
 
@@ -56,29 +55,29 @@
               <img src="images/tshirt.jpg" alt="shirt" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white">
                 <p><b>T-SHIRT</b></p>
-                <form action="thankyou.html">
-                  <p>Price:<b>40 $</b></p>
-                  <label for="size">Sizes:</label>
-                    <select name="sizes" id="sizes">
-                      <option value="small">S</option>
-                      <option value="medium">M</option>
-                      <option value="large">L</option>
-                    </select>
-                    <br><br>
-                    <label for="gender">Gender:</label>
-                    <select name="gender" id="gender">
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                    </select>
-                    <br><br>
-                    <label for="gender">Is a gift?</label>
-                    <select name="isGift" id="isGift">
-                      <option value="yes_gift">Yes</option>
-                      <option value="no_gift">No</option>
-                    </select>
-                    <br><br>
-                    <button class="w3-button w3-black w3-margin-bottom" onclick="">BUY</button>
-                  </form>
+                <form action="thankyou.html" onsubmit="buyTickets();">
+                  <p>Price: <b>40 $</b></p>
+                  <label for="size">Size:</label>
+                  <select name="sizes" id="sizes">
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                  </select>
+                  <br><br>
+                  <label for="gender">Gender:</label>
+                  <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                  <br><br>
+                  <label for="gender">Is it a gift?</label>
+                  <select name="isGift" id="isGift">
+                    <option value="yes_gift">Yes</option>
+                    <option value="no_gift">No</option>
+                  </select>
+                  <br><br>
+                  <button class="w3-button w3-black w3-margin-bottom" onclick="">BUY</button>
+                </form>
               </div>
             </div>
 
@@ -88,22 +87,20 @@
                 <p><b>CAP</b></p>
                 <form action="thankyou.html">
                   <p>Price: <b>5 $</b></p>
-                    <label for="size">Sizes:</label>
-                    <select name="sizes" id="sizes">
-                      <option value="small">S</option>
-                      <option value="medium">M</option>
-                      <option value="large">L</option>
-                    </select>
-
-                    </select>
-                    <br><br>
-                    <label for="gender">Is a gift?</label>
-                    <select name="isGift" id="isGift">
-                      <option value="yes_gift">Yes</option>
-                      <option value="no_gift">No</option>
-                    </select>
-                    <br><br>
-                    <button class="w3-button w3-black w3-margin-bottom" onclick="">BUY</button>
+                  <label for="size">Size:</label>
+                  <select name="sizes" id="sizes">
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                  </select>
+                  <br><br>
+                  <label for="gender">Is it a gift?</label>
+                  <select name="isGift" id="isGift">
+                    <option value="yes_gift">Yes</option>
+                    <option value="no_gift">No</option>
+                  </select>
+                  <br><br>
+                  <button class="w3-button w3-black w3-margin-bottom" onclick="">BUY</button>
                   </form>
               </div>
             </div>

@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Prometheus</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PVPLSPX');</script>
-  <!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prometheus</title>
 
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- End jQuery -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PVPLSPX');</script>
+<!-- End Google Tag Manager -->
 
-  <script src="scripts.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- End jQuery -->
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-  body {font-family: "Lato", sans-serif}
-  .person {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 80%;
-      height: 80%;
-      opacity: 0.9;
-  }
-  .img-circle {
-      border-radius: 50%;
-  }
+<script src="scripts.js"></script>
 
-  .collapsible { /* code by w3schools.com */
-    background-color: #fff;
-    font-size: 20px;
-    color: #757575;
-    cursor: pointer;
-    margin-top: 0.3em;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-  }
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.9;
+}
+.img-circle {
+    border-radius: 50%;
+}
 
-  .content {
-    display: none;
-    text-align: justify;
-    margin-right: 2em;
-  	margin-left: 2em;
-    margin-bottom: 0.2em;
-  }
+.collapsible { /* code by w3schools.com */
+  background-color: #fff;
+  font-size: 20px;
+  color: #757575;
+  cursor: pointer;
+  margin-top: 0.3em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
 
-  .active, .collapsible:hover {
-    background-color: #DDD;
-  }
+.content {
+  display: none;
+  text-align: justify;
+  margin-right: 2em;
+	margin-left: 2em;
+  margin-bottom: 0.2em;
+}
 
-  .mySlides {display: none}
-  </style>
-</head>
+.active, .collapsible:hover {
+  background-color: #DDD;
+}
+
+.mySlides {display: none}
+</style>
+
 
 <body onload="checkCookie();">
   <!-- Google Tag Manager (noscript) -->
@@ -227,10 +227,10 @@
       <div class="w3-container">
         <form action="" onsubmit="buyTickets();">
           <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-          <input id="tickets-number"class="w3-input w3-border" type="number" min="1" placeholder="How many?">
+          <input id="tickets-number"class="w3-input w3-border" type="number" min="1" placeholder="How many?" required>
           <p><label><i class="fa fa-user"></i> Send To</label></p>
-          <input id="tickets-email" class="w3-input w3-border" type="text" placeholder="Enter email">
-          <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" type="submit" onclick="location.href='thankyou.html';">PAY <i class="fa fa-check"></i></button>
+          <input id="tickets-email" class="w3-input w3-border" type="text" placeholder="Enter email" required>
+          <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" type="submit">PAY <i class="fa fa-check"></i></button>
           <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none' ">Close <i class="fa fa-remove"></i></button>
           <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
         </form>

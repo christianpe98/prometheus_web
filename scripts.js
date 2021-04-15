@@ -96,9 +96,6 @@ function buyTickets() {
   nTickets = ticketNumber();
   email = ticketEmail();
 
-  console.log(nTickets);
-  console.log(email);
-
   data = {
     tickets: nTickets,
     email: email,
