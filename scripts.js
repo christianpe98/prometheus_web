@@ -37,6 +37,7 @@ function checkCookie() {
   console.log("Cookie: " + user_uuid);
 }
 
+
 //////////////////////////
 //// JQUERY FUNCTIONS ////
 //////////////////////////
@@ -70,6 +71,10 @@ function ticketEmail() {
   return $('#tickets-email').val();
 }
 
+function ticketDate() {
+  return $('#tour-date').val();
+}
+
 
 //////////////////////////
 //// EVENT FUNCTIONS ////
@@ -93,13 +98,18 @@ function submitContact() {
 
 // Tickets
 function buyTickets() {
-  nTickets = ticketNumber();
+ 
+  num_tickets = ticketNumber();
   email = ticketEmail();
+  city = "prueba";
+  concert_date = 5;
 
   data = {
-    tickets: nTickets,
+    num_tickets: num_tickets,
     email: email,
-    uuid: user_uuid
+    city: city,
+    concert_date: concert_date,
+    user: user_uuid
   }
 
   dataLayer.push({'event': 'buy-tickets', 'data': data});
