@@ -70,6 +70,10 @@ function ticketEmail() {
   return $('#tickets-email').val();
 }
 
+function ticketDate() {
+  return $('#tour-date').val();
+}
+
 
 //////////////////////////
 //// EVENT FUNCTIONS ////
@@ -93,6 +97,7 @@ function submitContact() {
 
 // Tickets
 function buyTickets() {
+  date = ticketDate();
   nTickets = ticketNumber();
   email = ticketEmail();
 
@@ -100,6 +105,7 @@ function buyTickets() {
   console.log(email);
 
   data = {
+    date: date,
     tickets: nTickets,
     email: email,
     uuid: user_uuid
