@@ -97,7 +97,7 @@ function submitContact() {
 
 // Tickets
 function buyTickets() {
-  date = ticketDate();
+  //date = ticketDate();
   nTickets = ticketNumber();
   email = ticketEmail();
 
@@ -105,7 +105,7 @@ function buyTickets() {
   console.log(email);
 
   data = {
-    date: date,
+    //date: date,
     tickets: nTickets,
     email: email,
     uuid: user_uuid
