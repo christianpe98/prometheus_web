@@ -3,6 +3,10 @@
 var uuidv4 = () => ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c =>(c^(window.crypto||window.msCrypto).getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16));
 
 // COOKIE
+function user_uuid() {
+  return getCookie("user_uuid");
+}
+
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -90,7 +94,7 @@ function submitContact() {
     name: name,
     email: email,
     message: message,
-    uuid: user_uuid
+    uuid: user_uuid()
   }
   
   dataLayer.push({'event': 'submit-contact', 'data': data});
@@ -109,7 +113,7 @@ function buyTickets() {
     email: email,
     city: city,
     concert_date: concert_date,
-    user: user_uuid
+    user: user_uuid()
   }
 
   dataLayer.push({'event': 'buy-tickets', 'data': data});
