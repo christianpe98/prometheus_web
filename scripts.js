@@ -37,6 +37,7 @@ function checkCookie() {
   console.log("Cookie: " + user_uuid);
 }
 
+
 //////////////////////////
 //// JQUERY FUNCTIONS ////
 //////////////////////////
@@ -97,18 +98,18 @@ function submitContact() {
 
 // Tickets
 function buyTickets() {
-  //date = ticketDate();
-  nTickets = ticketNumber();
+ 
+  num_tickets = ticketNumber();
   email = ticketEmail();
-
-  console.log(nTickets);
-  console.log(email);
+  city = "prueba";
+  concert_date = 5;
 
   data = {
-    //date: date,
-    tickets: nTickets,
+    num_tickets: num_tickets,
     email: email,
-    uuid: user_uuid
+    city: city,
+    concert_date: concert_date,
+    user: user_uuid
   }
 
   dataLayer.push({'event': 'buy-tickets', 'data': data});
