@@ -249,7 +249,7 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="" onsubmit="submitContact();">
+        <form action="thankyou.html" onsubmit="submitContact();">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
               <input id="contact-name" class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -283,7 +283,8 @@ body {font-family: "Lato", sans-serif}
 </footer>
 
 <script>
-// Automatic Slideshow - change image every 4 seconds
+
+// Automatic Slideshow - change image every 6 seconds
 var myIndex = 0;
 carousel();
 
@@ -296,7 +297,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
+  setTimeout(carousel, 6000);    
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
