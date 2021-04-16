@@ -75,12 +75,14 @@ function ticketEmail() {
   return $('#tickets-email').val();
 }
 
-function ticketDate() {
-  return $('#tour-date').val();
+function ticketDate() { 
+  var tourDate = document.getElementById('tour-date');
+  return tourDate.innerText;
 }
 
 function ticketCity() {
-  return $('#tour-city').val();
+  var tourCity = document.getElementById('tour-city');
+  return tourCity.innerText;
 }
 
 

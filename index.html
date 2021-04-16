@@ -144,14 +144,13 @@ body {font-family: "Lato", sans-serif}
       <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
       
       <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding"><button id="tour-date" type="button" class="collapsible w3-padding">May <span class="w3-badge w3-right w3-margin-right">2</span></button>
-        
+        <li class="w3-padding"><button type="button" class="collapsible w3-padding">May <span class="w3-badge w3-right w3-margin-right">2</span></button>
           <div class="content w3-row-padding w3-padding-16" style="margin:0 -16px">
             <div class="w3-third">
               <img src="images/london.png" alt="London" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white w3-border">
-                <p id="tour-city"><b>London</b></p>
-                <p class="w3-opacity">Fri 21 May 2021</p>
+                <p><b id="tour-city">London</b></p>
+                <p id="tour-date" class="w3-opacity">Fri 21 May 2021</p>
                 <p>The secret city inside a city.</p>
                 <button id="buy-tickets" class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
@@ -159,8 +158,8 @@ body {font-family: "Lato", sans-serif}
             <div class="w3-third">
               <img src="images/paris.jpeg" alt="Paris" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white w3-border">
-                <p><b>Paris</b></p>
-                <p class="w3-opacity">Sat 22 May 2021</p>
+                <p><b id="tour-city">Paris</b></p>
+                <p id="tour-date" class="w3-opacity">Sat 22 May 2021</p>
                 <p>All out on the city of light and love.</p>
                 <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
@@ -168,8 +167,8 @@ body {font-family: "Lato", sans-serif}
             <div class="w3-third">
               <img src="images/newyork.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white w3-border">
-                <p><b>New York</b></p>
-                <p class="w3-opacity">Sat 29 May 2021</p>
+                <p><b id="tour-city">New York</b></p>
+                <p id="tour-date" class="w3-opacity">Sat 29 May 2021</p>
                 <p>The biggest concert in the biggest city.</p>
                 <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
@@ -185,8 +184,8 @@ body {font-family: "Lato", sans-serif}
             <div class="w3-third">
               <img src="images/toronto.png" alt="Toronto" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white w3-border">
-                <p><b>Toronto</b></p>
-                <p class="w3-opacity">Sat 14 Aug 2021</p>
+                <p><b id="tour-city">Toronto</b></p>
+                <p id="tour-date" class="w3-opacity">Sat 14 Aug 2021</p>
                 <p>You can see the tower from the venue!</p>
                 <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
@@ -194,8 +193,8 @@ body {font-family: "Lato", sans-serif}
             <div class="w3-third">
               <img src="images/newyork.jpeg" alt="New York" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white w3-border">
-                <p><b>New York</b></p>
-                <p class="w3-opacity">Sat 21 Aug 2021</p>
+                <p><b id="tour-city">New York</b></p>
+                <p id="tour-date" class="w3-opacity">Sat 21 Aug 2021</p>
                 <p>The biggest concert in the biggest city.</p>
                 <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
@@ -203,8 +202,8 @@ body {font-family: "Lato", sans-serif}
             <div class="w3-third">
               <img src="images/sanfran.jpeg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
               <div class="w3-container w3-white w3-border">
-                <p><b>San Francisco</b></p>
-                <p class="w3-opacity">Sat 28 Aug 2021</p>
+                <p><b id="tour-city">San Francisco</b></p>
+                <p id="tour-date" class="w3-opacity">Sat 28 Aug 2021</p>
                 <p>Shouldn't the Golden Gate Bridge be golden?</p>
                 <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
               </div>
@@ -224,7 +223,7 @@ body {font-family: "Lato", sans-serif}
        class="w3-button w3-teal w3-xlarge w3-display-topright">&times;</span>
         <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
       </header>
-      <div class="w3-container">
+      <div class="w3-container"> 
         <form action="thankyou.html" onsubmit="buyTickets();"> 
           <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
           <input id="tickets-number"class="w3-input w3-border" type="number" min="1" placeholder="How many?" required>
