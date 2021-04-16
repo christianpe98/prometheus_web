@@ -79,6 +79,10 @@ function ticketDate() {
   return $('#tour-date').val();
 }
 
+function ticketCity() {
+  return $('#tour-city').val();
+}
+
 
 //////////////////////////
 //// EVENT FUNCTIONS ////
@@ -105,8 +109,8 @@ function buyTickets() {
  
   num_tickets = ticketNumber();
   email = ticketEmail();
-  city = "prueba";
-  concert_date = 5;
+  city = ticketCity();
+  concert_date = ticketDate();
 
   data = {
     num_tickets: num_tickets,
