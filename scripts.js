@@ -118,3 +118,13 @@ function buyTickets() {
 
   dataLayer.push({'event': 'buy-tickets', 'data': data});
 }
+
+// Thank you
+function thankYou() {
+ 
+  data = {
+    user: user_uuid()
+  }
+
+  dataLayer.push({'event': 'thank-you', 'data': data});
+}
