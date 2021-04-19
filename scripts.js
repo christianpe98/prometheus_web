@@ -6,10 +6,6 @@ currentTourData = {};
 var uuidv4 = () => ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c =>(c^(window.crypto||window.msCrypto).getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16));
 
 // COOKIE
-function user_uuid() {
-  return getCookie("user_uuid");
-}
-
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -33,15 +29,19 @@ function getCookie(cname) {
   return "";
 }
 
-function checkCookie() {
+function user_uuid() {
   var user_uuid = getCookie("user_uuid");
   if (user_uuid == "") {
     user_uuid = uuidv4();
     if (user_uuid != "" && user_uuid != null) {
       setCookie("user_uuid", user_uuid, 365);
     }
+    else {
+      user_uuid = "empty"
+    }
   }
-  console.log("Cookie: " + user_uuid);
+  return user_uuid;
+  // console.log("Cookie: " + user_uuid);
 }
 
 
@@ -118,12 +118,7 @@ function buyTickets() {
   dataLayer.push({'event': 'buy-tickets', 'data': data});
 }
 
-// Thank you
-function thankYou() {
- 
-  data = {
-    user: user_uuid()
-  }
-
-  dataLayer.push({'event': 'thank-you', 'data': data});
+// Connect
+function connect() {
+  dataLayer.push({'event': 'connect'});
 }
