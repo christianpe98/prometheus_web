@@ -1,4 +1,7 @@
 
+//
+currentTourData = {};
+
 // UUID magic gotten from https://gist.github.com/jed/982883
 var uuidv4 = () => ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c =>(c^(window.crypto||window.msCrypto).getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16));
 
@@ -75,16 +78,6 @@ function ticketEmail() {
   return $('#tickets-email').val();
 }
 
-function ticketDate() { 
-  var tourDate = document.getElementById('tour-date');
-  return tourDate.innerText;
-}
-
-function ticketCity() {
-  var tourCity = document.getElementById('tour-city');
-  return tourCity.innerText;
-}
-
 
 //////////////////////////
 //// EVENT FUNCTIONS ////
@@ -111,8 +104,8 @@ function buyTickets() {
  
   num_tickets = ticketNumber();
   email = ticketEmail();
-  city = ticketCity();
-  concert_date = ticketDate();
+  city = currentTourData["city"];
+  concert_date = currentTourData["concert_date"];
 
   data = {
     num_tickets: num_tickets,
@@ -121,7 +114,7 @@ function buyTickets() {
     concert_date: concert_date,
     user: user_uuid()
   }
-
+  
   dataLayer.push({'event': 'buy-tickets', 'data': data});
 }
 
