@@ -1,6 +1,7 @@
 
 //
 currentTourData = {};
+currentMerchData = {};
 
 // UUID magic gotten from https://gist.github.com/jed/982883
 var uuidv4 = () => ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c =>(c^(window.crypto||window.msCrypto).getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16));
@@ -120,6 +121,19 @@ function buyTickets() {
 
 // Buy merch
 function buyMerch() {
+  product = currentMerchData["product"];
+  prize = currentMerchData["prize"];
+  size = $('select[name=sizes] option').filter(':selected').val()
+  console.log(size);
+
+  data = {
+    product: product,
+    prize: prize,
+    user: user_uuid()
+  }
+  
+  dataLayer.push({'event': 'buy-merch', 'data': data});
+  
   
 }
 
