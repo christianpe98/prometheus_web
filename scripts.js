@@ -118,6 +118,11 @@ function buyTickets() {
   dataLayer.push({'event': 'buy-tickets', 'data': data});
 }
 
+// Buy merch
+function buyMerch() {
+  
+}
+
 // Connect
 function connect() {
   dataLayer.push({'event': 'connect'});
