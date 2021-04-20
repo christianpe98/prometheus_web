@@ -59,7 +59,7 @@ body {font-family: "Lato", sans-serif}
                   <p>Price: <b class="merch-prize">40 $</b></p>
                   <label for="size">Size:</label>
                   <select name="sizes" id="sizes">
-                    <option value="S">S</option>
+                    <option value="S" selected="selected">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
                   </select>
@@ -89,9 +89,9 @@ body {font-family: "Lato", sans-serif}
                   <p>Price: <b class="merch-prize">5 $</b></p>
                   <label for="size">Size:</label>
                   <select name="sizes" id="sizes">
-                    <option value="small" selected>S</option>
-                    <option value="medium">M</option>
-                    <option value="large">L</option>
+                    <option value="S" selected="selected">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
                   </select>
                   <br><br>
                   <label for="gender">Is it a gift?</label>
@@ -140,6 +140,8 @@ function myFunction() {
         
         product = $($(this).children().find(".merch-product")[0]).text();
         prize = $($(this).children().find(".merch-prize")[0]).text();
+        sizeList = $($(this).children().find("#sizes")[0]).text();
+        console.log(sizeList);
 
         currentMerchData = {
           "product": product,

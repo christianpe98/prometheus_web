@@ -123,12 +123,21 @@ function buyTickets() {
 function buyMerch() {
   product = currentMerchData["product"];
   prize = currentMerchData["prize"];
-  size = $('select[name=sizes] option').filter(':selected').val()
-  console.log(size);
+  
+  var eSize = document.getElementById("sizes");
+  size = eSize.value;
+  
+  var eGender = document.getElementById("gender");
+  var gender = eGender.value;
+  
+  var eGift = document.getElementById("isGift");
+  var gift = eGift.options[eGift.selectedIndex].text;
+   console.log(gift);
 
   data = {
     product: product,
     prize: prize,
+    gender: gender,
     user: user_uuid()
   }
   
