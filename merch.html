@@ -58,7 +58,7 @@ body {font-family: "Lato", sans-serif}
                 <form action="thankyou.html" onsubmit="buyMerch();">
                   <p>Price: <b class="merch-prize">40 $</b></p>
                   <label for="size">Size:</label>
-                  <select name="sizes" id="sizes">
+                  <select name="sizes" class="sizes">
                     <option value="S" selected="selected">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
@@ -71,7 +71,7 @@ body {font-family: "Lato", sans-serif}
                   </select>
                   <br><br>
                   <label for="gender">Is it a gift?</label>
-                  <select name="isGift" id="isGift">
+                  <select name="isGift" class="isGift">
                     <option value="yes_gift">Yes</option>
                     <option value="no_gift">No</option>
                   </select>
@@ -88,14 +88,14 @@ body {font-family: "Lato", sans-serif}
                 <form action="thankyou.html" onsubmit="buyMerch();">
                   <p>Price: <b class="merch-prize">5 $</b></p>
                   <label for="size">Size:</label>
-                  <select name="sizes" id="sizes">
+                  <select name="sizes" class="sizes">
                     <option value="S" selected="selected">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
                   </select>
                   <br><br>
                   <label for="gender">Is it a gift?</label>
-                  <select name="isGift" id="isGift">
+                  <select name="isGift" class="isGift">
                     <option value="yes_gift">Yes</option>
                     <option value="no_gift">No</option>
                   </select>
@@ -143,6 +143,12 @@ function myFunction() {
 
         prize = $($(this).siblings().find(".merch-prize")[0]).text();
         console.log(prize);
+        
+        size = $($(this).parent().find(".sizes")[0]).val();
+        console.log(size);
+        
+        gift = $($(this).parent().find(".isGift")[0]).val();
+        console.log(gift);
 
         currentMerchData = {
           "product": product,
