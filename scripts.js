@@ -122,22 +122,19 @@ function buyTickets() {
 // Buy merch
 function buyMerch() {
   product = currentMerchData["product"];
-  prize = currentMerchData["prize"];
-  
-  var eSize = document.getElementById("sizes");
-  size = eSize.value;
-  
-  var eGender = document.getElementById("gender");
-  var gender = eGender.value;
-  
-  var eGift = document.getElementById("isGift");
-  var gift = eGift.options[eGift.selectedIndex].text;
-   console.log(gift);
+  size = currentMerchData["size"];
+  gender = currentMerchData["gender"];
+  if(gender === undefined) {
+    gender = null;
+  }
+  isgift = currentMerchData["gift"];
+  gift = (isgift == "true");
 
   data = {
     product: product,
-    prize: prize,
+    size: size,
     gender: gender,
+    gift: gift,
     user: user_uuid()
   }
   
