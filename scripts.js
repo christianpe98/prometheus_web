@@ -94,7 +94,7 @@ function submitContact() {
     name: name,
     email: email,
     message: message,
-    uuid: user_uuid()
+    user: user_uuid()
   }
   
   dataLayer.push({'event': 'submit-contact', 'data': data});
