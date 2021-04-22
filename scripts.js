@@ -90,12 +90,12 @@ function submitContact() {
   email = contactEmail();
   message = contactMessage();
   
-  data = {
+  data = JSON.stringify({
     name: name,
     email: email,
     message: message,
     user: user_uuid()
-  }
+  });
   
   dataLayer.push({'event': 'submit-contact', 'data': data});
 }
