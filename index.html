@@ -248,7 +248,7 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="" onsubmit="submitContact();">
+        <form action="#" onsubmit="submitContact();" id="contactform">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
               <input id="contact-name" class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -356,6 +356,14 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+</script>
+
+<script>
+  $(function() {
+    $('form').submit(function() {
+        return false;
+    }); 
+  })
 </script>
 
 </body>

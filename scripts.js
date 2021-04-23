@@ -97,19 +97,9 @@ function submitContact() {
     user: user_uuid()
   };
   
-  var url="https://prometheus-tagging.herokuapp.com/contact";
-
-  $.post({
-    url: url,
-    data: JSON.stringify(data),
-    contentType: "application/json; charset=utf-8",
-    success: function (resp) {
-        
-    },
-    error: function(r, e) {
-        console.log('Error sending tagging data: ' + e);
-    }  
-  }, "json");
+  dataLayer.push({'event': 'submit-contact', 'data': data});
+  
+  window.location.href = "#";
 }
 
 // Tickets
