@@ -119,10 +119,14 @@ function buyTickets() {
   }
   
   dataLayer.push({'event': 'buy-tickets', 'data': data});
+  
+  window.location.href = "thankyou.html";
 }
 
 // Buy merch
 function buyMerch() {
+  console.log("hey");
+  
   product = currentMerchData["product"];
   size = currentMerchData["size"];
   gender = currentMerchData["gender"];
@@ -142,7 +146,7 @@ function buyMerch() {
   
   dataLayer.push({'event': 'buy-merch', 'data': data});
   
-  
+  window.location.href = "thankyou.html";
 }
 
 // Connect

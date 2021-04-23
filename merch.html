@@ -156,6 +156,13 @@ function myFunction() {
   }
   </script>
 
+  <script> // prevents forms from automatically redirecting
+    $(function() {
+      $('form').submit(function() {
+          return false;
+      }); 
+    })
+  </script>
 
 </body>
 </html>
