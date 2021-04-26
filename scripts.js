@@ -110,12 +110,12 @@ function buyTickets() {
   email = ticketEmail();
   city = currentTourData["city"];
   concert_date = currentTourData["concert_date"];
+  concert_id = currentTourData["concert_id"];
 
   data = {
     num_tickets: num_tickets,
     email: email,
-    city: city,
-    concert_date: concert_date,
+    concert_id: concert_id,
     user: user_uuid()
   }
   
