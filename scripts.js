@@ -97,7 +97,8 @@ function submitContact() {
     user: user_uuid()
   };
   
-  dataLayer.push({'event': 'submit-contact', 'data': data});
+  dataLayer.push({'event': 'submit-contact', 'data': data, 'redirect':"#"});
+  
   
   window.location.href = "#";
 }
@@ -118,14 +119,11 @@ function buyTickets() {
     user: user_uuid()
   }
   
-  dataLayer.push({'event': 'buy-tickets', 'data': data});
-  
-  window.location.href = "thankyou.html";
+  dataLayer.push({'event': 'buy-tickets', 'data': data, 'redirect':"thankyou.html"});
 }
 
 // Buy merch
 function buyMerch() {
-  console.log("hey");
   
   product = currentMerchData["product"];
   size = currentMerchData["size"];
@@ -144,9 +142,7 @@ function buyMerch() {
     user: user_uuid()
   }
   
-  dataLayer.push({'event': 'buy-merch', 'data': data});
-  
-  window.location.href = "thankyou.html";
+  dataLayer.push({'event': 'buy-merch', 'data': data, 'redirect':"thankyou.html"});
 }
 
 // Connect
