@@ -335,7 +335,7 @@ for (i = 0; i < coll.length; i++) {
       
       date = Date.parse($(this).siblings(".tour-date")[0].textContent);
       city = $($(this).parent().find(".tour-city")[0]).text();
-      concertId = Date.parse($(this).siblings(".concert-id")[0].textContent);
+      concertId = $(this).siblings(".concert-id")[0].textContent;
       
       currentTourData = {
         "concert_date": date,
