@@ -125,7 +125,7 @@ function buyTickets() {
 // Buy merch
 function buyMerch() {
   
-  product = currentMerchData["product"];
+  product = currentMerchData["product"].toLowerCase();
   size = currentMerchData["size"];
   gender = currentMerchData["gender"];
   if(gender === undefined) {
